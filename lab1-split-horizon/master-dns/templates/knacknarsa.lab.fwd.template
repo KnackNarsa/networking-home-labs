@@ -1,0 +1,17 @@
+$TTL    3D
+@       IN      SOA     master-dns.knacknarsa.lab.      hostmaster.knacknarsa.lab. (
+                2018042901       ; Serial
+                8H      ; Refresh
+                2H      ; Retry
+                1W      ; Expire
+                1D      ; Negative Cache TTL
+)
+@       	    IN      NS      master.knacknarsa.lab.
+master-dns      IN      A       192.168.0.15
+
+
+; ---- EXAMPLES -----
+;www            IN      A      192.168.0.20            ; Web server
+;app            IN      A      192.168.0.21            ; App server
+;mail           IN      A      192.168.0.22            ; Mail server
+;@              IN      MX     mail.knacknarsa.lab.
