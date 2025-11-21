@@ -1,4 +1,4 @@
-#client machines
+#dns-client machine
 
 FROM ubuntu:22.04
 
