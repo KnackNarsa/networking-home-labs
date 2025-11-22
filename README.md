@@ -1,5 +1,5 @@
 # Welcome!
-This repo contains labs to help you learn networking concepts from the comfort of your home. Each lab contains step-by-step instructions, explaining the purpose of your steps to help you gain the understanding of what you are actually doing.
+This repo contains labs to help you learn networking concepts from the comfort of your home. Each lab contains step-by-step instructions, explaining the purpose of your steps to help you gain an understanding of what you are actually doing.
 
 # IMPORTANT
 
@@ -7,7 +7,7 @@ These projects require docker to set-up the lab environments!
 
 ## UBUNTU SETUP
 
-Install packages to allow apt to use repository over HTTPS
+Install packages to allow apt to use the repository over HTTPS
 
 ``bash
 sudo apt update
