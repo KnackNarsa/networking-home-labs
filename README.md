@@ -28,7 +28,7 @@ Add Docker repository to apt sources
       sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-Update api
+Update apt
 
 ``bash
 sudo apt update
