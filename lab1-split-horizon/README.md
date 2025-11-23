@@ -3,12 +3,12 @@
 
 
 >  ⚠️ **LAB WORK IN PROGRESS**
-- [ ] Dockerfiles for container
-- [ ] `docker-compose.yml`
+- [x] Dockerfiles for container
+- [x] `docker-compose.yml`
 - [ ] Lab instructions (step-by-step)
-- [ ] Images / screenshots of completed lab
-- [ ] Validation tests
+- [x] lab environment functional
 - [ ] Network Diagram
+- [ ] Completed docker images of lab1
 
 ## Overview
 

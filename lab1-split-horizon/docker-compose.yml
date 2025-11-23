@@ -1,0 +1,90 @@
+# Create lab environment
+
+services:
+  master-dns:
+    build: ./master-dns
+    restart: unless-stopped
+    hostname: master-dns
+    domainname: knacknarsa.lab
+    networks:
+      internal_net:
+        ipv4_address: 192.168.15.10
+      external_net:
+        ipv4_address: 10.15.0.10
+
+  dns-slave-1:
+    build: ./dns-slave-1
+    restart: unless-stopped
+    hostname: dns-slave-1
+    domainname: knacknarsa.lab
+    networks:
+      internal_net:
+        ipv4_address: 192.168.15.11
+      external_net:
+        ipv4_address: 10.15.0.11
+    
+  dns-slave-2:
+    build: ./dns-slave-2
+    restart: unless-stopped
+    hostname: dns-slave-2
+    domainname: knacknarsa.lab
+    networks:
+      internal_net:
+        ipv4_address: 192.168.15.12
+      external_net:
+        ipv4_address: 10.15.0.12
+  cache-forwarder:
+    build: ./cache-forwarder
+    restart: unless-stopped
+    hostname: cache-forwarder
+    domainname: knacknarsa.lab
+    networks:
+      internal_net:
+        ipv4_address: 192.168.15.13
+      external_net:
+        ipv4_address: 10.15.0.13
+  
+  client-internal:
+    build: ./client-internal
+    hostname: client-internal
+    domainname: knacknarsa.lab
+    networks:
+      internal_net:
+        ipv4_address: 192.168.15.14
+
+  client-external:
+    build: ./client-external
+    hostname: client-external
+    networks:
+      external_net:
+        ipv4_address: 10.15.0.14
+
+  web-internal:
+    build: ./web-internal
+    restart: unless-stopped
+    hostname: web-internal
+    domainname: knacknarsa.lab
+    networks:
+      internal_net:
+        ipv4_address: 192.168.15.15
+  web-external:
+    build: ./web-external
+    restart: unless-stopped
+    hostname: web-external
+    domainname: knacknarsa.lab
+    networks:
+      external_net:
+        ipv4_address: 10.15.0.15
+
+networks:
+  internal_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.15.0/24
+  
+  external_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.15.0.0/24
